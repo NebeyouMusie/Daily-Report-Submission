@@ -4,11 +4,11 @@ import { CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 interface ReportData {
-  date: string;
-  name: string;
-  department: string;
-  report: string;
-  report_summary: string;
+  Date: string;
+  Name: string;
+  Department: string;
+  "What have you done?": string;
+  Summary: string;
 }
 
 interface SuccessCardProps {
@@ -39,27 +39,27 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({ data }) => {
               <div className="space-y-3">
                 <div>
                   <span className="font-medium">📅 Date:</span>
-                  <p className="mt-1 text-muted-foreground">{formatDate(data.date)}</p>
+                  <p className="mt-1 text-muted-foreground">{formatDate(data.Date)}</p>
                 </div>
                 
                 <div>
                   <span className="font-medium">👤 Name:</span>
-                  <p className="mt-1 text-muted-foreground">{data.name}</p>
+                  <p className="mt-1 text-muted-foreground">{data.Name}</p>
                 </div>
                 
                 <div>
                   <span className="font-medium">🏢 Department:</span>
-                  <p className="mt-1 text-muted-foreground">{data.department}</p>
+                  <p className="mt-1 text-muted-foreground">{data.Department}</p>
                 </div>
                 
                 <div>
                   <span className="font-medium">📝 Report:</span>
-                  <p className="mt-1 text-muted-foreground whitespace-pre-wrap">{data.report}</p>
+                  <p className="mt-1 text-muted-foreground whitespace-pre-wrap">{data["What have you done?"]}</p>
                 </div>
                 
                 <div>
                   <span className="font-medium">📊 Summary:</span>
-                  <p className="mt-1 text-muted-foreground">{data.report_summary}</p>
+                  <p className="mt-1 text-muted-foreground">{data.Summary}</p>
                 </div>
               </div>
             </div>

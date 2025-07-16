@@ -39,11 +39,11 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 interface ReportData {
-  date: string;
-  name: string;
-  department: string;
-  report: string;
-  report_summary: string;
+  Date: string;
+  Name: string;
+  Department: string;
+  "What have you done?": string;
+  Summary: string;
 }
 
 export const DailyReportForm: React.FC = () => {
