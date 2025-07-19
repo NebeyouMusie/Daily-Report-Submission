@@ -117,15 +117,6 @@ export const DailyReportForm: React.FC = () => {
     );
   }
 
-  if (isSubmitting) {
-    return (
-      <Card className="w-full max-w-md mx-auto shadow-lg">
-        <CardContent className="p-8">
-          <LoadingSpinner />
-        </CardContent>
-      </Card>
-    );
-  }
 
   return (
     <Card className="w-full max-w-md mx-auto shadow-lg">
@@ -223,7 +214,14 @@ export const DailyReportForm: React.FC = () => {
             />
 
             <Button type="submit" className="w-full" disabled={isSubmitting}>
-              Submit
+              {isSubmitting ? (
+                <>
+                  <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2" />
+                  Submitting...
+                </>
+              ) : (
+                'Submit'
+              )}
             </Button>
           </form>
         </Form>
